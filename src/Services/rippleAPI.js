@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios'
+import LedgerItem from '../Components/ledgerItem'
 
 
 class RippleAPI extends React.Component {
@@ -60,7 +61,13 @@ class RippleAPI extends React.Component {
     return (
       <div>
         <h3>{this.state.ledger_index}</h3>
-        { this.state.transactions.map(transaction => <div> {transaction.tx.TransactionType} {transaction.currency} {transaction.amount} {transaction.result} </div>)}
+        { this.state.transactions.map(transaction => <div>
+          <LedgerItem
+          transationType ={transaction.tx.TransactionType} 
+          amount =  {transaction.amount}
+          currency = {transaction.currency} 
+          result = {transaction.result} />
+          </div>)}
              </div>
     );
   }
