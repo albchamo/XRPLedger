@@ -10,8 +10,8 @@ class Navbar extends React.Component {
     render() {
         return (
             <div className ='Navbar'>
-                <div className ='container-fluid'>
-                hola
+                <div className ='container-fluid text-light'>
+                <h4>XRP Ledger Visualization</h4>
                 </div>
             </div>
         )

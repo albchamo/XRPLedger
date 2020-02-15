@@ -8,7 +8,7 @@ class RippleAPI extends React.Component {
       super(props);
       this.state = {
           transactions : [],
-          next_ledger_index : 53368807,
+          next_ledger_index : 53438262,
           ledger_index: 1,
       };
   }
@@ -60,14 +60,20 @@ class RippleAPI extends React.Component {
   render() {
     return (
       <div>
-        <h3>{this.state.ledger_index}</h3>
-        { this.state.transactions.map(transaction => <div>
+        <div className = " titulo p-3 mb-5">
+        <h3>Ledger: {this.state.ledger_index}       Number of transactions: {this.state.transactions.length}</h3>
+        </div>
+        <div className = "container shadow-none p-3 mb-5 bg-light rounded">
+          <div className = "row">
+        { this.state.transactions.map(transaction => <div className="col-2">
           <LedgerItem
-          transationType ={transaction.tx.TransactionType} 
+          transactionType ={transaction.tx.TransactionType} 
           amount =  {transaction.amount}
           currency = {transaction.currency} 
           result = {transaction.result} />
           </div>)}
+          </div>
+          </div>
              </div>
     );
   }

@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const IconStyle = styled.img` width: 5px; `;
+const IconStyle = styled.img` width: 30px; `;
 
-const Icon = () => {
+const Icon = (props) => {
     return (
-        <IconStyle/>
+        <IconStyle src = {props.src}/>
     );
 };
 

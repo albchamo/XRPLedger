@@ -9,13 +9,9 @@ function App() {
     <div className="App">
        
        <Navbar/>
-       <div className = 'container'>
-         <div className = 'row'>
-           <div className = 'col-6'>
+       
            <RippleAPI/>
-           </div>
-         </div>
-       </div>
+          
     </div>
   );
 }
